@@ -1,6 +1,23 @@
 #root{
   width: 100vw;
 }
+.icon{
+  width: clamp(35px, 3.5vw, 100px);
+  position: relative;
+}
+.icon::after {
+  content: attr(data-count); /* Muestra el valor del atributo data-count */
+  position: absolute;
+  top: -10px; /* Ajusta según sea necesario */
+  left: -15px; /* Ajusta según sea necesario */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .Card-container {
   box-sizing: border-box;
   min-width: 260px;

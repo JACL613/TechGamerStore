@@ -8,7 +8,7 @@ export default function Card({url, title , text}) {
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{text}</p>
-                    <button href="#" className="btn btn-dark">Comprar</button>
+                    <button href="#" className="btn btn-dark">Agregar al carrito</button>
                 </div>
             </div>
     </div>

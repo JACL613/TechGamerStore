@@ -1,20 +1,46 @@
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from 'react'
+import { Carousel } from 'react-bootstrap'
 
-export default function Banner() {
+
+
+export default function Banner({ desktopImages, mobileImages} ) {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+  
+  
+  const images = isMobile ? mobileImages: desktopImages
+  console.log(images);
+  
+  if(!desktopImages.length)return null
+ 
   return (
-    <section style={{height:'100vh', minHeight: '25rem'}} className="position-relative w-100 bg-dark text-light text-center overflow-hidden">
-      <div className="position-relative opacity-50 z-1 top-0 left-0 h-100 w-100 bg-black"></div>
-      <div style={{transform: 'translateX(-50%)translateY(-50%)', left: '50%'}} className="position-absolute top-50 flex-grow-0 mh-100 w-100 z-0 ">
-
-        <img className="mw-100 w-100" style={{
-          filter: 'grayscale(0%) sepia(100%) saturate(200%)hue-rotate(190deg)'
-        }}  src="https://zeniaboulevard.es/img_v2/directorio/locales/tienda-1-389.jpg" width='auto'/>
-        </div>
-        <div style={{top: '-50%', left: '50%', transform: 'translateY(-50%) translateX(-50%)'}} className="position-relative z-2">
-            <h1>¡Bienvenido a la mejor Tienda Gamer!</h1>
-            <p className="lead">Encuentra los últimos juegos, hardware y accesorios.</p>
-            <a href="#" className="btn btn-primary btn-lg">Ver Productos</a>
-        </div>
-        
-    </section>    
+    <Carousel className="responsive-banner">
+      {images.map((image, index) => (
+        <Carousel.Item key={index}>
+          <img
+            className="d-block w-100"
+            src={image.src}
+            alt={`Slide ${index + 1}`}
+          />
+          <Carousel.Caption>
+            <h3>{`Slide ${index + 1} label`}</h3>
+            <p>{image.description}</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      ))}
+    </Carousel>
   )
 }

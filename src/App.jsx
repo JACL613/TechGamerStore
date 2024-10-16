@@ -6,13 +6,26 @@ import NavTabs from './assets/components/NavTabs'
 import Card from './assets/components/Card'
 import { data } from './assets/utils/data'
 import FormContact from './assets/components/FormContact'
-
+import img1 from './assets/images/desktop/img1.jpg'
+import img1M from './assets/images/mobile/img1.jpg'
 function App() {
   const [value, setValue]  = useState(data.portatiles)
+
+  const desktop = [
+    {
+     src: img1,
+     description: 'Preparate para unirte al mundo gamer' 
+    }]
+  const mobile = [
+    {
+      
+     src:  img1M,
+     description: 'Preparate para unirte al mundo gamer' 
+    }]
   return (
     <div className='flex-column justify-content-center'>
       <Nav/>
-      <Banner />
+      <Banner desktopImages={desktop} mobileImages={mobile}/>
       <section className="container py-5">
       <h2 className="text-center mb-5">Nuestros Productos</h2>
       <NavTabs setTab={e => setValue(e)}/>

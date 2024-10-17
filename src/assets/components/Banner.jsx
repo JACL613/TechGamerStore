@@ -36,7 +36,7 @@ export default function Banner({ desktopImages, mobileImages} ) {
             alt={`Slide ${index + 1}`}
           />
           <Carousel.Caption>
-            <h3>{`Slide ${index + 1} label`}</h3>
+            <h3>{image.title || ''}</h3>
             <p>{image.description}</p>
           </Carousel.Caption>
         </Carousel.Item>

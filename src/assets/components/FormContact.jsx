@@ -10,11 +10,11 @@ export default function FormContact() {
   },[state, state.succeeded])
 
   if (state.succeeded) {
-      return <p className=''>Gracias mensaje enviado!</p>;
+      return <p className=''>Gracias, mensaje enviado!</p>;
   }
   return (      
     <form className="form-contact" onSubmit={handleSubmit}>
-        <div className="title">Contact us</div>
+        <div className="title">Contactanos</div>
         <label htmlFor="email">
         Email
       </label>

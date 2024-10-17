@@ -1,7 +1,28 @@
-import { ShoppingCartIcon } from '@heroicons/react/24/outline'
+import { ArrowRightEndOnRectangleIcon, ShoppingCartIcon } from '@heroicons/react/24/outline'
 import '../animations/style.css'
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 export default function Nav() {
+    const [productos , setProductos] = useState(JSON.parse(localStorage.getItem('productosCarrito') )|| [])
+    const [login , setLogin] = useState(JSON.parse(localStorage.getItem('login_success')) || false)
+    useEffect(() => {
+        const handleStorageChange = () => {
+          setProductos(JSON.parse(localStorage.getItem('productosCarrito')) || []);
+          setLogin(localStorage.getItem('login_success') || false) 
+        };
+    
+        window.addEventListener('storage', handleStorageChange);
+    
+        return () => {
+          window.removeEventListener('storage', handleStorageChange);
+        };
+      }, []);
+      const handleLogout = () => {
+        setLogin(false)
+        localStorage.removeItem('login_success')
+        window.dispatchEvent(new Event('storage'))
+
+      }
   return (
     <nav className=" container-fluid navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container">
@@ -18,13 +39,13 @@ export default function Nav() {
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
             <div className="d-flex align-items-center pe-2">
-              <div className="position-relative">
+              <Link to='/carrito' className="position-relative">
                 <ShoppingCartIcon className="text-white" style={{ width: '24px', height: '24px' }} />
                 <span className="position-absolute top-0 start-100  translate-middle badge rounded-pill bg-danger">
-                  {0}
+                  {productos.length}
                   <span className="visually-hidden">items en el carrito</span>
                 </span>
-              </div>
+              </Link>
           </div>
                 <li className="nav-item">
                     <Link className="nav-link active" aria-current="page" to="/">Inicio</Link>
@@ -37,7 +58,11 @@ export default function Nav() {
                     <Link className="nav-link" to='/contacto' >Contacto</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/login">Login</Link>
+                    {!login 
+                    ?<Link className="nav-link" to="/login">Login</Link>
+                    :<button onClick={handleLogout} className='bg-danger px-2 rounded-1 ms-2' >
+                        <ArrowRightEndOnRectangleIcon  className="text-white" style={{ width: '24px', height: '24px' }}/>    
+                    </button>}
                 </li>
             </ul>
         </div>

@@ -14,11 +14,11 @@ export default function GalleryProducts() {
       <NavTabs setTab={e => setValue(e)}/>
       <div className='gallery'>
     {
-      value.map(data => <Card key={data.alt} url={data.image} title={data.title} text={data.description}/>)
+      value.map(data => <Card key={data.alt} id={data.id} url={data.image} title={data.title} text={data.description} precio={data.price}/>)
     }
       </div>
       </div>
-      <div className="container py-5 d-flex justify-content-center">
+      <div className="container py-5 d-flex jusJSON.stringify(newProductos));fy-content-center">
       </div>
     </>
   )

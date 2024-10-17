@@ -1,6 +1,9 @@
 #root{
   width: 100vw;
 }
+.main{
+  min-height: 100vh;
+}
 .icon{
   width: clamp(35px, 3.5vw, 1.26rem);
   position: relative;

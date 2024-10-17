@@ -1,5 +1,5 @@
 export const data = {
-    "portatiles": [
+    "Portátiles": [
       {
         "title": "Portátil Gamer 1",
         "description": "Potente laptop gaming con procesador Intel i7 y gráficos RTX 3060.",
@@ -22,7 +22,7 @@ export const data = {
         "link": "#"
       }
     ],
-    "torres": [
+    "Torres": [
     {
       "title": "Torre Gamer 1",
       "description": "PC Gamer con procesador Ryzen 7 y tarjeta gráfica RTX 3080.",
@@ -42,7 +42,7 @@ export const data = {
       "link": "#"
     }
   ],
-  "sillas": [
+  "Sillas gamer": [
     {
       "title": "Silla Gamer 1",
       "description": "Silla ergonómica con soporte lumbar y ajuste de altura.",
@@ -65,7 +65,7 @@ export const data = {
       "link": "#"
     }
   ],
-  "escritorios": [
+  "Escritorios": [
     {
       "title": "Escritorio Gamer 1",
       "description": "Escritorio amplio con soporte para monitores y luces LED.",
@@ -85,53 +85,10 @@ export const data = {
       "link": "#"
     }
   ],
-  "mouses": [
-    {
-      "title": "Mouse Gamer 1",
-      "description": "Mouse óptico con retroiluminación RGB y 6 botones programables.",
-      "image": "https://m.media-amazon.com/images/I/61mpMH5TzkL._AC_SL1500_.jpg",
-      "link": "#"
-    },
-    {
-      "title": "Mouse Gamer 2",
-      "description": "Mouse inalámbrico con sensor de alta precisión y ergonomía avanzada.",
-      "image": "https://jyrtechnology.com.co/wp-content/uploads/2023/07/MGJR-049-2.jpg",
-      "link": "#"
-    },
-    {
-      "title": "Mouse Gamer 3",
-      "description": "Mouse con peso ajustable y 12 botones personalizables.",
-      "image": "https://acdn.mitiendanube.com/stores/001/418/967/products/mouse-usb-gamer-scorpion-spear-genius-gx-gaming1-9469fcc7fe45ef031b16028644463670-1024-10241-5277f7e0125043b8eb16138454696663-1024-1024.webp",
-      "link": "#"
-    }
-  ],
-  "diademas": [
-        {
-            "title": "Diadema Gamer 1",
-            "description": "Sonido envolvente 7.1 y micrófono con cancelación de ruido.",
-            "image": "https://tiendapaisa.com.co/wp-content/uploads/2023/04/Diadema-Gamer-Azul.jpg",
-            "alt": "Diadema Gamer 1",
-            "link": "#"
-        },
-        {
-            "title": "Diadema Gamer 2",
-            "description": "Auriculares inalámbricos con batería de larga duración y RGB.",
-            "image": "https://dobleclicknet.com/wp-content/uploads/2020/03/G2000.png",
-            "alt": "Diadema Gamer 2",
-            "link": "#"
-        },
-        {
-            "title": "Diadema Gamer 3",
-            "description": "Auriculares con sonido 3D, ideales para juegos de disparos.",
-            "image": "https://colombia.com.co/wp-content/uploads/2021/06/Diadema-Gamer-VSG-Shake-USB-Bogota%CC%81-Colombia.jpg",
-            "alt": "Diadema Gamer 3",
-            "link": "#"
-        }
-    ],
-    "pantallas":[
+    "Monitores":[
         {
             "title": "Pantalla Gamer 1",
-            "description": "Monitor curvo de 32\" con 144Hz y 1ms de tiempo de respuesta.",
+            "description": "Monitor curvo de 32 con 144Hz y 1ms de tiempo de respuesta.",
             "image": "https://m.media-amazon.com/images/I/71LJJrKbezL._AC_SL1500_.jpg",
             "alt": "Pantalla Gamer 1",
             "link": "#"
@@ -145,13 +102,13 @@ export const data = {
         },
         {
             "title": "Pantalla Gamer 3",
-            "description": "Pantalla ultrawide de 34\" con 165Hz y soporte G-Sync.",
+            "description": "Pantalla ultrawide de 34 con 165Hz y soporte G-Sync.",
             "image": "https://www.profesionalreview.com/wp-content/uploads/2020/08/Monitor-gaming-02.jpg",
             "alt": "Pantalla Gamer 3",
             "link": "#"
         }
     ],
-    "teclados": [
+    "Periféricos": [
         {
           "title": "Teclado Gamer 1",
           "descripcion": "Teclado mecánico con interruptores rojos y retroiluminación RGB.",
@@ -169,8 +126,66 @@ export const data = {
           "descripcion": "Teclado RGB con modo anti-ghosting y respuesta rápida.",
           "image": "https://www.newvision.com.ar/wp-content/uploads/sites/3/2019/06/Teclado-gamer-con-mouse.jpg",
           "link": "#"
-        }
-      ]
-    
+        },
+        {
+          "title": "Diadema Gamer 1",
+          "description": "Sonido envolvente 7.1 y micrófono con cancelación de ruido.",
+          "image": "https://tiendapaisa.com.co/wp-content/uploads/2023/04/Diadema-Gamer-Azul.jpg",
+          "alt": "Diadema Gamer 1",
+          "link": "#"
+      },
+      {
+          "title": "Diadema Gamer 2",
+          "description": "Auriculares inalámbricos con batería de larga duración y RGB.",
+          "image": "https://dobleclicknet.com/wp-content/uploads/2020/03/G2000.png",
+          "alt": "Diadema Gamer 2",
+          "link": "#"
+      },
+      {
+          "title": "Diadema Gamer 3",
+          "description": "Auriculares con sonido 3D, ideales para juegos de disparos.",
+          "image": "https://colombia.com.co/wp-content/uploads/2021/06/Diadema-Gamer-VSG-Shake-USB-Bogota%CC%81-Colombia.jpg",
+          "alt": "Diadema Gamer 3",
+          "link": "#"
+      },
+      {
+        "title": "Mouse Gamer 1",
+        "description": "Mouse óptico con retroiluminación RGB y 6 botones programables.",
+        "image": "https://m.media-amazon.com/images/I/61mpMH5TzkL._AC_SL1500_.jpg",
+        "link": "#"
+      },
+      {
+        "title": "Mouse Gamer 2",
+        "description": "Mouse inalámbrico con sensor de alta precisión y ergonomía avanzada.",
+        "image": "https://jyrtechnology.com.co/wp-content/uploads/2023/07/MGJR-049-2.jpg",
+        "link": "#"
+      },
+      {
+        "title": "Mouse Gamer 3",
+        "description": "Mouse con peso ajustable y 12 botones personalizables.",
+        "image": "https://acdn.mitiendanube.com/stores/001/418/967/products/mouse-usb-gamer-scorpion-spear-genius-gx-gaming1-9469fcc7fe45ef031b16028644463670-1024-10241-5277f7e0125043b8eb16138454696663-1024-1024.webp",
+        "link": "#"
+      }
+    ],
+    //   "Tarjetas Gráficas": [
+    //   {
+    //   "title": "Tarjeta Gráfica 1",
+    //   "description": "",
+    //   "image": "https://symcomputadores.com/wp-content/uploads/2024/04/MSI-GEFORCE-RTX-3050-VENTUS-2X-8GB-OC-DDR6.png",
+    //   "link": "#"
+    //   },
+    //   {
+    //   "title": "Tarjeta Gráfica 2",
+    //   "description": "",
+    //   "image": "",
+    //   "link": "#"
+    //   },
+    //   {
+    //   "title": "Tarjeta Gráfica 3",
+    //   "description": "",
+    //   "image": "",
+    //   "link": "#"
+    //   },
+    // ],
   }
   

@@ -2,7 +2,7 @@
   width: 100vw;
 }
 .icon{
-  width: clamp(35px, 3.5vw, 100px);
+  width: clamp(35px, 3.5vw, 1.26rem);
   position: relative;
 }
 .icon::after {

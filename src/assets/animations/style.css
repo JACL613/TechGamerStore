@@ -7,7 +7,7 @@
     --clr-4: #e54cff;
   
     --blur: 1rem;
-    --fs: clamp(1.26rem, 5vw, 7rem);
+    --fs: clamp(1.26rem, 5vw, 4rem);
     --ls: clamp(-0.56px, -0.25vw, -3.5px);
   }
   

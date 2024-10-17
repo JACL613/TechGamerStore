@@ -1,5 +1,6 @@
 import { ShoppingCartIcon } from '@heroicons/react/24/outline'
 import '../animations/style.css'
+import { Link } from 'react-router-dom'
 export default function Nav() {
   return (
     <nav className=" container-fluid navbar navbar-expand-lg navbar-dark bg-dark">
@@ -16,17 +17,27 @@ export default function Nav() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-                <div  className='text-white icon' data-count={3}>
-                    <ShoppingCartIcon/>
-                    </div>
+            <div className="d-flex align-items-center pe-2">
+              <div className="position-relative">
+                <ShoppingCartIcon className="text-white" style={{ width: '24px', height: '24px' }} />
+                <span className="position-absolute top-0 start-100  translate-middle badge rounded-pill bg-danger">
+                  {0}
+                  <span className="visually-hidden">items en el carrito</span>
+                </span>
+              </div>
+          </div>
                 <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <Link className="nav-link active" aria-current="page" to="/">Inicio</Link>
+
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Productos</a>
+                    <Link className="nav-link" to="/productos">Productos</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Contacto</a>
+                    <Link className="nav-link" to='/contacto' >Contacto</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/login">Login</Link>
                 </li>
             </ul>
         </div>
